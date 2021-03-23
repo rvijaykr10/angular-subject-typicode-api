@@ -1,0 +1,18 @@
+<h2
+  class="d-flex justify-content-center align-items-center pt-2"
+  *ngIf="!loading"
+>
+  POSTS
+</h2>
+<div *ngFor="let post of posts" class="card py-2">
+  <div class="card-body">
+    <h5 class="card-title">({{ post.id }}) &nbsp;{{ post.title }}</h5>
+    <p class="card-text">{{ post.body }}</p>
+  </div>
+</div>
+<div class="d-flex justify-content-center align-items-center" *ngIf="loading">
+  <img
+    src="https://miro.medium.com/max/441/1*9EBHIOzhE1XfMYoKz1JcsQ.gif"
+    alt=""
+  />
+</div>
